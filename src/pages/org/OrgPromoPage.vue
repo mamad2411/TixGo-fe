@@ -272,8 +272,7 @@ async function save(): Promise<void> {
 
         <div class="two">
           <div>
-            <label for="pr-max">{{ t('dash.event.promo.maxUses') }}</label
-            ><NInputNumber
+            <label for="pr-max">{{ t('dash.event.promo.maxUses') }}</label><NInputNumber
               id="pr-max"
               v-model:value="f.max_uses"
               :min="1"
@@ -282,8 +281,7 @@ async function save(): Promise<void> {
             />
           </div>
           <div>
-            <label for="pr-acc">{{ t('dash.event.promo.perAcc') }}</label
-            ><NInputNumber
+            <label for="pr-acc">{{ t('dash.event.promo.perAcc') }}</label><NInputNumber
               id="pr-acc"
               v-model:value="f.max_per_account"
               :min="1"
@@ -304,12 +302,20 @@ async function save(): Promise<void> {
 
         <div class="two">
           <div>
-            <label for="pr-s">{{ t('dash.event.promo.starts') }}</label
-            ><input id="pr-s" v-model="f.starts_at" type="datetime-local" class="dt" />
+            <label for="pr-s">{{ t('dash.event.promo.starts') }}</label><input
+              id="pr-s"
+              v-model="f.starts_at"
+              type="datetime-local"
+              class="dt"
+            />
           </div>
           <div>
-            <label for="pr-e">{{ t('dash.event.promo.ends') }}</label
-            ><input id="pr-e" v-model="f.ends_at" type="datetime-local" class="dt" />
+            <label for="pr-e">{{ t('dash.event.promo.ends') }}</label><input
+              id="pr-e"
+              v-model="f.ends_at"
+              type="datetime-local"
+              class="dt"
+            />
           </div>
         </div>
         <small v-if="!rangeOk" class="bad" role="alert">{{ t('dash.event.promo.rangeBad') }}</small>

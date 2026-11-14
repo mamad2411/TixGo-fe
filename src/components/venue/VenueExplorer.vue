@@ -422,8 +422,9 @@ const legend = computed(() => props.event.tiers.map((x, i) => ({ tier: x, color:
           </p>
           <ul>
             <li v-for="p in picked" :key="p.id">
-              <span>{{ p.label }}</span
-              ><small class="a-muted">{{ p.tierName }} · {{ rp(p.price) }}</small>
+              <span>{{ p.label }}</span><small class="a-muted"
+                >{{ p.tierName }} · {{ rp(p.price) }}</small
+              >
               <button
                 type="button"
                 :aria-label="t('seats.remove', { label: p.label })"

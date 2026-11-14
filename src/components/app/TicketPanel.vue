@@ -295,8 +295,7 @@ const canBuy = computed(
       </p>
       <ul v-else>
         <li v-for="p in picked" :key="p.id">
-          <span>{{ p.label }}</span
-          ><small class="a-muted">{{ p.tierName }}</small
+          <span>{{ p.label }}</span><small class="a-muted">{{ p.tierName }}</small
           ><b>{{ rp(p.price) }}</b>
         </li>
       </ul>

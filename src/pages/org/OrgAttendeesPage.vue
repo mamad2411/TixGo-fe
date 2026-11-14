@@ -323,8 +323,9 @@ const who = (a: Attendee) => a.attendee_name || a.owner_email
             data-test="act-rename"
             @click="mode = 'rename'"
           >
-            <strong>{{ t('dash.event.att.rename') }}</strong
-            ><small class="a-muted">{{ t('dash.event.att.renameHint') }}</small>
+            <strong>{{ t('dash.event.att.rename') }}</strong><small class="a-muted">{{
+              t('dash.event.att.renameHint')
+            }}</small>
           </button>
           <button
             type="button"
@@ -333,8 +334,9 @@ const who = (a: Attendee) => a.attendee_name || a.owner_email
             data-test="act-reissue"
             @click="choose('reissue')"
           >
-            <strong>{{ t('dash.event.att.reissue') }}</strong
-            ><small class="a-muted">{{ t('dash.event.att.reissueHint') }}</small>
+            <strong>{{ t('dash.event.att.reissue') }}</strong><small class="a-muted">{{
+              t('dash.event.att.reissueHint')
+            }}</small>
           </button>
           <button
             type="button"
@@ -343,8 +345,9 @@ const who = (a: Attendee) => a.attendee_name || a.owner_email
             data-test="act-void"
             @click="choose('void')"
           >
-            <strong>{{ t('dash.event.att.void') }}</strong
-            ><small class="a-muted">{{ t('dash.event.att.voidHint') }}</small>
+            <strong>{{ t('dash.event.att.void') }}</strong><small class="a-muted">{{
+              t('dash.event.att.voidHint')
+            }}</small>
           </button>
         </div>
 
