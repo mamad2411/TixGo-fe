@@ -1,0 +1,96 @@
+/* Token KARCIS (docs/16-UI-IDENTITY.md §3). Satu sumber untuk CSS; theme.ts mencerminkan nilai yang sama. */
+:root {
+  --kertas: #f2ead8;
+  --kertas-2: #e8dec6;
+  --tinta: #121110;
+  --merah-karcis: #e32620; /* fill/tombol, teks putih di atasnya 4.6:1 */
+  --merah-teks: #bf1a15; /* merah sebagai TEKS di atas kertas */
+  --kuning-spidol: #ffd23f;
+  --biru-riso: #2447f5;
+  --hijau-stabilo: #7be495;
+  --abu-fotokopi: #5f5b52;
+
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter Variable', system-ui, sans-serif;
+  --font-data: 'Space Mono', ui-monospace, monospace;
+
+  --border: 2px solid var(--tinta);
+  --shadow-keras: 4px 4px 0 var(--tinta);
+  --radius: 2px;
+}
+
+/* Mode "Malam Gig": poster di malam hari, bukan hitam OLED. */
+:root[data-theme='dark'] {
+  --kertas: #1a1815;
+  --kertas-2: #26231f;
+  --tinta: #f2ead8;
+  --abu-fotokopi: #a39d8f;
+  --merah-teks: #ea5d59;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+/* Kanvas dokumen mengikuti permukaan aktif (useSurface), supaya transisi/overscroll di halaman
+   gelap tidak memperlihatkan krem di belakangnya. */
+:root[data-surface='dark'] body {
+  background: #0c0a09;
+}
+
+body {
+  margin: 0;
+  background: var(--kertas);
+  color: var(--tinta);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.t-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+.t-data {
+  font-family: var(--font-data);
+}
+
+/* Card = kertas bertepi tinta tebal. */
+.n-card.n-card--bordered {
+  border: var(--border);
+}
+
+/* Bayangan keras pada kontrol Naive UI (tanpa blur). */
+.n-button:not(.n-button--disabled) {
+  box-shadow: var(--shadow-keras);
+  transition:
+    transform 120ms,
+    box-shadow 120ms;
+}
+.n-button:not(.n-button--disabled):hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 var(--tinta);
+}
+.n-button:not(.n-button--disabled):active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--tinta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

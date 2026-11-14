@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="presentation" aria-hidden="true">
+<defs>
+<linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5e3b5"/><stop offset=".55" stop-color="#d9b979"/><stop offset="1" stop-color="#8a6b34"/></linearGradient>
+<filter id="pb" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<path d="M60,840 V300 A240,240 0 0 1 540,300 V840 Z" fill="none" stroke="#d9b979" stroke-width="22" opacity=".12" filter="url(#pb)"/>
+<path d="M70,840 V300 A230,230 0 0 1 530,300 V840" fill="none" stroke="url(#pg)" stroke-width="3" opacity="1.0"/>
+<path d="M50,840 V300 A250,250 0 0 1 550,300 V840" fill="none" stroke="url(#pg)" stroke-width="1.6" opacity="0.55"/>
+<path d="M32,840 V300 A268,268 0 0 1 568,300 V840" fill="none" stroke="url(#pg)" stroke-width="1.2" opacity="0.32"/>
+<path d="M16,840 V300 A284,284 0 0 1 584,300 V840" fill="none" stroke="url(#pg)" stroke-width="1" opacity="0.18"/>
+<path d="M16,840 H584" stroke="url(#pg)" stroke-width="1.4" opacity=".6"/><path d="M40,858 H560" stroke="url(#pg)" stroke-width="1" opacity=".3"/>
+</svg>

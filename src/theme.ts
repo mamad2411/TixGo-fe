@@ -1,0 +1,91 @@
+import type { GlobalThemeOverrides } from 'naive-ui'
+
+// Cermin token di styles/tokens.css (docs/16 §3, §8). Kontras BELUM diukur (docs/18 §6).
+export const palette = {
+  kertas: '#F2EAD8',
+  kertas2: '#E8DEC6',
+  tinta: '#121110',
+  merah: '#E32620',
+  merahTeks: '#BF1A15',
+  kuning: '#FFD23F',
+  biru: '#2447F5',
+  hijau: '#7BE495',
+  abu: '#5F5B52',
+} as const
+
+const border = `2px solid ${palette.tinta}`
+
+export const themeOverrides: GlobalThemeOverrides = {
+  common: {
+    primaryColor: palette.merah,
+    primaryColorHover: '#C9231E',
+    primaryColorPressed: '#A81B17',
+    primaryColorSuppl: palette.merah,
+    infoColor: palette.biru,
+    successColor: '#2F9E5B',
+    warningColor: palette.kuning,
+    errorColor: palette.merahTeks,
+    bodyColor: palette.kertas,
+    cardColor: palette.kertas2,
+    modalColor: palette.kertas,
+    popoverColor: palette.kertas,
+    textColorBase: palette.tinta,
+    textColor1: palette.tinta,
+    textColor2: palette.tinta,
+    textColor3: palette.abu,
+    borderColor: palette.tinta,
+    dividerColor: palette.tinta,
+    borderRadius: '2px',
+    borderRadiusSmall: '2px',
+    fontFamily: "'Inter Variable', system-ui, sans-serif",
+    fontFamilyMono: "'Space Mono', ui-monospace, monospace",
+    fontWeightStrong: '700',
+  },
+  Button: {
+    border,
+    borderHover: border,
+    borderPressed: border,
+    borderFocus: border,
+    borderPrimary: border,
+    borderHoverPrimary: border,
+    borderPressedPrimary: border,
+    borderFocusPrimary: border,
+    textColorPrimary: '#FFFFFF',
+    textColorHoverPrimary: '#FFFFFF',
+    textColorPressedPrimary: '#FFFFFF',
+    textColorFocusPrimary: '#FFFFFF',
+    fontWeight: '700',
+  },
+  Card: { borderColor: palette.tinta, borderRadius: '2px' },
+  Input: { border, borderHover: border, borderFocus: border, borderRadius: '2px' },
+  Select: {
+    peers: {
+      InternalSelection: {
+        border,
+        borderHover: border,
+        borderActive: border,
+        borderFocus: border,
+        borderRadius: '2px',
+      },
+    },
+  },
+  // Tag = stiker: blok solid + teks tinta (kontras; docs/16 §3 "teks di atas kuning/hijau selalu tinta").
+  Tag: {
+    borderRadius: '2px',
+    border,
+    colorBordered: palette.kertas,
+    colorWarning: palette.kuning,
+    colorBorderedWarning: palette.kuning,
+    textColorWarning: palette.tinta,
+    borderWarning: border,
+    colorInfo: palette.biru,
+    colorBorderedInfo: palette.biru,
+    textColorInfo: '#FFFFFF',
+    borderInfo: border,
+    colorSuccess: palette.hijau,
+    colorBorderedSuccess: palette.hijau,
+    textColorSuccess: palette.tinta,
+    borderSuccess: border,
+  },
+  Progress: { fillColor: palette.tinta, railColor: palette.kertas2 },
+}

@@ -1,0 +1,455 @@
+/* Tema aplikasi pelanggan = turunan landing (docs/09 keputusan "Tema"): gelap hangat + krem + emas.
+   Token di-scope ke .app supaya landing (.landing) dan /_kit (KARCIS) tidak berubah. */
+.app {
+  --a-bg: #0f0e0c;
+  --a-bg2: #181613;
+  --a-bg3: #211e1a; /* permukaan terangkat: kartu, input */
+  --a-ink: #f1ebdd;
+  --a-muted: #a8a193; /* 7.3:1 di atas --a-bg (diukur di landing) */
+  --a-gold: #e0b25e;
+  --a-gold-d: #8a6b34;
+  --a-cream: #f2ead8;
+  --a-on-gold: #1a1613;
+  --a-line: rgb(241 235 221 / 0.12);
+  --a-line-strong: rgb(224 178 94 / 0.6);
+  --a-danger: #f4938a; /* teks galat di atas gelap */
+  --a-ok: #9bd8a8;
+  --a-glass: rgb(15 14 12 / 0.9); /* header lengket */
+  --a-panel: #181613; /* bar filter */
+  --a-shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 18px 40px rgb(0 0 0 / 0.45);
+  --a-serif: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
+  --a-sans: 'Manrope Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --a-pad: clamp(16px, 4vw, 48px);
+  --a-max: 1200px;
+  --a-radius: 10px;
+
+  min-height: 100vh;
+  background: var(--a-bg);
+  color: var(--a-ink);
+  font-family: var(--a-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.app *,
+.app *::before,
+.app *::after {
+  box-sizing: border-box;
+}
+.app h1,
+.app h2,
+.app h3,
+.app p {
+  margin: 0;
+}
+:where(.app a) {
+  color: var(--a-gold);
+}
+.app :focus-visible {
+  outline: 2px solid var(--a-gold);
+  outline-offset: 3px;
+}
+
+.app .a-serif {
+  font-family: var(--a-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.app .a-caps {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--a-muted);
+}
+.app .a-muted {
+  color: var(--a-muted);
+}
+
+.app .a-skip {
+  position: fixed;
+  left: 12px;
+  top: -64px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  background: var(--a-gold);
+  color: var(--a-on-gold);
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.app .a-skip:focus {
+  top: 12px;
+}
+
+/* Sistem tombol pil (riset: Luma = satu aksi utama solid + aksi kedua senyap; DICE = pil padat berlabel tegas).
+   Varian: default = sekunder (garis), --solid = utama, --ghost = tersier tanpa garis, --sm = padat.
+   Semua varian: tinggi >=44px (sm 36px hanya untuk aksi sekunder dalam baris), fokus terlihat, tekan, nonaktif, memuat. */
+.app .a-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid var(--a-line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--a-gold);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background 0.18s,
+    color 0.18s,
+    border-color 0.18s,
+    transform 0.12s,
+    box-shadow 0.18s;
+}
+.app .a-pill:hover {
+  background: var(--a-gold);
+  border-color: var(--a-gold);
+  color: var(--a-on-gold);
+}
+.app .a-pill:active {
+  transform: translateY(1px) scale(0.985);
+}
+.app .a-pill:focus-visible {
+  outline: 2px solid var(--a-gold);
+  outline-offset: 3px;
+}
+.app .a-pill--solid {
+  background: var(--a-gold);
+  border-color: var(--a-gold);
+  color: var(--a-on-gold);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.18) inset;
+}
+.app .a-pill--solid:hover {
+  background: var(--a-cream);
+  border-color: var(--a-cream);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.22);
+}
+.app .a-pill--ghost {
+  border-color: transparent;
+  color: var(--a-ink);
+}
+.app .a-pill--ghost:hover {
+  background: var(--a-bg3);
+  border-color: transparent;
+  color: var(--a-gold);
+}
+.app .a-pill--sm {
+  min-height: 36px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+.app .a-pill:disabled,
+.app .a-pill[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.app .a-pill[aria-busy='true'] {
+  color: transparent;
+  pointer-events: none;
+}
+.app .a-pill[aria-busy='true']::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--a-on-gold);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: a-pill-spin 0.7s linear infinite;
+}
+@keyframes a-pill-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app .a-pill,
+  .app .a-pill:active {
+    transition: none;
+    transform: none;
+  }
+  .app .a-pill[aria-busy='true']::after {
+    animation-duration: 1.6s;
+  }
+}
+.app .pg-back {
+  justify-self: start;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+/* Kotak faktor kedua di halaman auth. */
+.app .au-mfa {
+  margin: 0;
+  padding: 14px 16px 16px;
+  border: 1px solid var(--a-line-strong);
+  border-radius: 16px;
+}
+.app .au-factor {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.app .au-mfa legend {
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--a-muted);
+}
+
+/* Pola halaman auth (dipakai semua halaman di pages/auth). */
+.app .au-title {
+  font-size: 40px;
+  color: var(--a-cream);
+}
+.app .au-lead {
+  margin: 6px 0 24px;
+}
+.app .au-form {
+  display: grid;
+  gap: 18px;
+}
+.app .au-err {
+  padding: 10px 14px;
+  border: 1px solid var(--a-danger);
+  border-radius: 10px;
+  color: var(--a-danger);
+  font-size: 14px;
+}
+.app .au-ok {
+  padding: 10px 14px;
+  border: 1px solid var(--a-ok);
+  border-radius: 10px;
+  color: var(--a-ok);
+  font-size: 14px;
+}
+.app .au-links {
+  margin-top: 16px;
+  font-size: 14px;
+}
+.app .au-links a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  margin-block: -10px;
+  align-items: center;
+  justify-content: center;
+}
+/* Kerangka muat (skeleton): sapuan cahaya emas lembut, bukan kedip opacity.
+   Dipakai kartu event, hero katalog, detail, dan checkout. */
+.app .a-sk {
+  position: relative;
+  overflow: hidden;
+  background: var(--a-bg2);
+}
+.app .a-sk::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 28%,
+    rgb(217 185 121 / 0.12) 48%,
+    rgb(242 234 216 / 0.06) 56%,
+    transparent 74%
+  );
+  transform: translateX(-100%);
+  animation: a-sk-sweep 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes a-sk-sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Potongan di dalam kerangka muat. Warnanya padat dan sengaja tanpa animasi sendiri:
+   satu sapuan cahaya per permukaan (induk .a-sk) supaya semua halaman berirama sama. */
+.app .a-sk-bar {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--a-bg3);
+  opacity: 0.55;
+}
+.app .a-sk-bar--title {
+  height: 28px;
+  opacity: 0.8;
+}
+.app .a-sk-bar--sm {
+  height: 10px;
+  opacity: 0.4;
+}
+.app .a-sk-pill {
+  display: block;
+  width: 76px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--a-bg3);
+  opacity: 0.45;
+}
+.app .a-sk-btn {
+  display: block;
+  width: 88px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--a-bg3);
+  opacity: 0.6;
+}
+.app .a-sk-thumb {
+  display: block;
+  width: 68px;
+  height: 88px;
+  border-radius: 14px;
+  background: var(--a-bg3);
+  opacity: 0.55;
+}
+
+.app .a-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app *,
+  .app *::before,
+  .app *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Nada terang per-section (bukan sakelar global): token --a-* ditimpa hanya di dalam .tone-light,
+   sehingga komponen yang memakai token ikut berganti. Kontras diukur terhadap #f2ead8 / #fbf6ea:
+   ink 15.0, muted 6.3, gold 5.2, danger 5.9, ok 5.3, on-gold 5.75 (semua >= 4.5:1). */
+.app .tone-light {
+  --a-bg: #f6f2ea;
+  --a-bg2: #efe9dc;
+  --a-bg3: #ffffff;
+  --a-ink: #1c1812;
+  --a-muted: #5f574a;
+  --a-gold: #8a5a12;
+  --a-gold-d: #5e4519;
+  --a-cream: #1c1812; /* judul: tinta, bukan krem */
+  --a-on-gold: #ffffff;
+  --a-line: rgb(28 24 18 / 0.12);
+  --a-line-strong: #8a8070; /* 3.25:1, batas kontrol */
+  --a-danger: #a8281d;
+  --a-ok: #2f6b3f;
+  --a-glass: rgb(246 242 234 / 0.9);
+  --a-panel: #ffffff;
+  --a-shadow: 0 1px 2px rgb(28 24 18 / 0.06), 0 14px 32px rgb(28 24 18 / 0.1);
+
+  background: var(--a-bg);
+  color: var(--a-ink);
+}
+.app .has-decor {
+  position: relative;
+  isolation: isolate;
+}
+/* Mode gelap: section "terang" ikut gelap (token dasar dikembalikan). */
+.app.is-dark .tone-light {
+  --a-bg: #0f0e0c;
+  --a-bg2: #181613;
+  --a-bg3: #211e1a;
+  --a-ink: #f1ebdd;
+  --a-muted: #a8a193;
+  --a-gold: #e0b25e;
+  --a-gold-d: #8a6b34;
+  --a-cream: #f2ead8;
+  --a-on-gold: #1a1613;
+  --a-line: rgb(241 235 221 / 0.12);
+  --a-line-strong: rgb(224 178 94 / 0.6);
+  --a-danger: #f4938a;
+  --a-ok: #9bd8a8;
+  --a-glass: rgb(15 14 12 / 0.9);
+  --a-panel: #181613;
+  --a-shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 18px 40px rgb(0 0 0 / 0.45);
+}
+.app:not(.is-dark) .tone-light .a-pill--solid:hover {
+  background: var(--a-gold-d);
+  color: var(--a-on-gold);
+}
+
+/* Permukaan yang selalu gelap (kartu foto, overlay di atas gambar) mengunci token gelapnya sendiri.
+   Tanpa ini, kartu di dalam section .tone-light mewarisi tinta gelap dan judulnya hilang di atas foto. */
+.app .on-dark {
+  color: var(--a-ink);
+  --a-bg: #0f0e0c;
+  --a-bg2: #181613;
+  --a-bg3: #211e1a;
+  --a-ink: #f1ebdd;
+  --a-muted: #a8a193;
+  --a-gold: #e0b25e;
+  --a-gold-d: #8a6b34;
+  --a-cream: #f2ead8;
+  --a-on-gold: #1a1613;
+  --a-line: rgb(241 235 221 / 0.12);
+  --a-line-strong: rgb(224 178 94 / 0.6);
+  --a-danger: #f4938a;
+  --a-ok: #9bd8a8;
+  /* Panel ikut dikunci: permukaan ini selalu gelap, jadi kontrol di atasnya (mis. tombol favorit
+     di hero) tidak boleh mengambil panel putih milik mode terang. */
+  --a-panel: #181613;
+  --a-glass: rgb(15 14 12 / 0.9);
+}
+
+/* Halaman transaksi (checkout/pesanan/refund) mengikuti mode terang/gelap lewat ToneLight; pita mengisi tinggi layar. */
+.app .tone-page {
+  min-height: calc(100vh - 66px);
+}
+
+/* Select native bergaya pil: panah sendiri dengan jarak 16px dari tepi kanan (appearance:none menghapus panah bawaan yang menempel di tepi). */
+.app .a-select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 44px;
+  padding: 0 44px 0 18px;
+  border: 1px solid var(--a-line-strong);
+  border-radius: 999px;
+  background-color: var(--a-panel, var(--a-bg2));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a8a193' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6l6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px 16px;
+  color: var(--a-ink);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+}
+.app .a-select:hover {
+  border-color: var(--a-gold);
+}
+.app .a-select:focus-visible {
+  outline: none;
+  border-color: var(--a-gold);
+  box-shadow: 0 0 0 3px rgb(217 185 121 / 0.22);
+}

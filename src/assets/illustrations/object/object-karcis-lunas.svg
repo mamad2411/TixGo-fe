@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 972 412" role="img" aria-labelledby="t">
+<title id="t">Karcis konser bernomor dengan cap LUNAS</title>
+<path d="M24,0 H936 a24,24 0 0 0 24,24 V376 a24,24 0 0 0 -24,24 H24 a24,24 0 0 0 -24,-24 V24 a24,24 0 0 0 24,-24 Z" transform="translate(6,6)" fill="var(--tinta,#121110)"/>
+<path d="M24,0 H936 a24,24 0 0 0 24,24 V376 a24,24 0 0 0 -24,24 H24 a24,24 0 0 0 -24,-24 V24 a24,24 0 0 0 24,-24 Z" fill="var(--kuning-spidol,#FFD23F)" stroke="var(--tinta,#121110)" stroke-width="4"/>
+<rect x="0" y="0" width="700" height="400" fill="var(--kertas,#F2EAD8)" stroke="var(--tinta,#121110)" stroke-width="4" id="body"/>
+<line x1="700" y1="14" x2="700" y2="386" stroke="var(--tinta,#121110)" stroke-width="4" stroke-dasharray="14 12" id="perforation"/>
+<circle cx="700" cy="80" r="7" fill="var(--kertas,#F2EAD8)" stroke="var(--tinta,#121110)" stroke-width="3"/>
+<circle cx="700" cy="160" r="7" fill="var(--kertas,#F2EAD8)" stroke="var(--tinta,#121110)" stroke-width="3"/>
+<circle cx="700" cy="240" r="7" fill="var(--kertas,#F2EAD8)" stroke="var(--tinta,#121110)" stroke-width="3"/>
+<circle cx="700" cy="320" r="7" fill="var(--kertas,#F2EAD8)" stroke="var(--tinta,#121110)" stroke-width="3"/>
+<text x="48" y="104" font-family="var(--font-data, Space Mono, ui-monospace, monospace)" font-size="22" fill="var(--abu-fotokopi,#5F5B52)" textLength="420" lengthAdjust="spacingAndGlyphs">NO. 000184  ·  MALAM FINAL</text>
+<text x="48" y="206" font-family="var(--font-display, Anton, Impact, sans-serif)" font-size="108" fill="var(--tinta,#121110)" id="judul" textLength="520" lengthAdjust="spacingAndGlyphs">PANGGUNG</text>
+<text x="48" y="206" font-family="var(--font-display, Anton, Impact, sans-serif)" font-size="108" fill="none" stroke="var(--biru-riso,#2447F5)" stroke-width="2" transform="translate(3,3)" aria-hidden="true" textLength="520" lengthAdjust="spacingAndGlyphs">PANGGUNG</text>
+<text x="48" y="262" font-family="var(--font-display, Anton, Impact, sans-serif)" font-size="64" fill="var(--merah-karcis,#E32620)" textLength="330" lengthAdjust="spacingAndGlyphs">RAYA 2027</text>
+<text x="48" y="322" font-family="var(--font-data, Space Mono, ui-monospace, monospace)" font-size="24" fill="var(--tinta,#121110)" textLength="420" lengthAdjust="spacingAndGlyphs">BLOK C / BARIS 12 / KURSI 05</text>
+<text x="48" y="360" font-family="var(--font-data, Space Mono, ui-monospace, monospace)" font-size="20" fill="var(--abu-fotokopi,#5F5B52)" textLength="330" lengthAdjust="spacingAndGlyphs">SAB 14 AGU · PINTU 17.00</text>
+<rect x="740" y="70" width="5" height="220" fill="var(--tinta,#121110)"/>
+<rect x="749" y="70" width="7" height="220" fill="var(--tinta,#121110)"/>
+<rect x="760" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="767" y="70" width="5" height="220" fill="var(--tinta,#121110)"/>
+<rect x="776" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="783" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="792" y="70" width="7" height="220" fill="var(--tinta,#121110)"/>
+<rect x="803" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="810" y="70" width="7" height="220" fill="var(--tinta,#121110)"/>
+<rect x="821" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="828" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="837" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="844" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="851" y="70" width="5" height="220" fill="var(--tinta,#121110)"/>
+<rect x="862" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="869" y="70" width="5" height="220" fill="var(--tinta,#121110)"/>
+<rect x="878" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="885" y="70" width="5" height="220" fill="var(--tinta,#121110)"/>
+<rect x="894" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="901" y="70" width="3" height="220" fill="var(--tinta,#121110)"/>
+<rect x="910" y="70" width="7" height="220" fill="var(--tinta,#121110)"/>
+<text x="820" y="334" font-family="var(--font-data, Space Mono, ui-monospace, monospace)" font-size="20" fill="var(--tinta,#121110)" text-anchor="middle" textLength="110" lengthAdjust="spacingAndGlyphs">000184</text>
+<g id="stamp" transform="translate(618 300) rotate(-8)"><circle r="58" fill="none" stroke="var(--merah-karcis,#E32620)" stroke-width="7"/><circle r="47" fill="none" stroke="var(--merah-karcis,#E32620)" stroke-width="3"/><text font-family="var(--font-display, Anton, Impact, sans-serif)" font-size="38" fill="var(--merah-karcis,#E32620)" text-anchor="middle" y="13" textLength="84" lengthAdjust="spacingAndGlyphs">LUNAS</text></g>
+</svg>

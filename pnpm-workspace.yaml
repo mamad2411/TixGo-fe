@@ -1,0 +1,2 @@
+allowBuilds:
+  core-js: false # postinstall hanya banner pendanaan; tidak diperlukan

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="t">
+<title id="t">Cap HADIR</title>
+<g id="stamp" transform="rotate(-6 160 160)">
+<circle cx="160" cy="160" r="146" fill="var(--hijau-stabilo,#7BE495)" stroke="var(--tinta,#121110)" stroke-width="8"/>
+<circle cx="160" cy="160" r="122" fill="none" stroke="var(--tinta,#121110)" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+<text x="160" y="190" font-family="var(--font-display, Anton, Impact, sans-serif)" font-size="92" fill="var(--tinta,#121110)" text-anchor="middle" textLength="190" lengthAdjust="spacingAndGlyphs">HADIR</text>
+<text x="160" y="236" font-family="var(--font-data, Space Mono, monospace)" font-size="22" fill="var(--tinta,#121110)" text-anchor="middle" textLength="150" lengthAdjust="spacingAndGlyphs">TIXGO · 2027</text></g></svg>

@@ -1,0 +1,16 @@
+# Git hooks (docs/21-TOOLING.md). Pasang: `lefthook install`. Lewati sekali: LEFTHOOK=0 git commit ...
+pre-commit:
+  parallel: true
+  commands:
+    eslint:
+      glob: '*.{ts,vue,js}'
+      run: pnpm exec eslint {staged_files}
+    prettier:
+      glob: '*.{ts,vue,js,json,css}'
+      run: pnpm exec prettier --check {staged_files}
+pre-push:
+  commands:
+    typecheck:
+      run: pnpm typecheck
+    test:
+      run: pnpm test

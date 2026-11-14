@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs>
+<filter id="b50" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="50"/></filter>
+<filter id="b24" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="24"/></filter>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2ead8" stop-opacity="0"/><stop offset=".55" stop-color="#f2ead8" stop-opacity=".85"/><stop offset="1" stop-color="#f2ead8"/></linearGradient>
+</defs>
+<g filter="url(#b50)">
+<ellipse cx="1146" cy="718" rx="419" ry="119" fill="#e8a96a" opacity="0.51"/>
+<ellipse cx="378" cy="691" rx="351" ry="120" fill="#f6c58a" opacity="0.57"/>
+<ellipse cx="192" cy="508" rx="297" ry="78" fill="#f6c58a" opacity="0.38"/>
+<ellipse cx="1219" cy="482" rx="335" ry="80" fill="#ffd9a0" opacity="0.57"/>
+<ellipse cx="121" cy="298" rx="268" ry="90" fill="#ffd9a0" opacity="0.56"/>
+<ellipse cx="668" cy="505" rx="371" ry="85" fill="#e8a96a" opacity="0.53"/>
+<ellipse cx="1023" cy="282" rx="389" ry="70" fill="#fff0d6" opacity="0.51"/>
+<ellipse cx="833" cy="562" rx="241" ry="92" fill="#fff0d6" opacity="0.46"/>
+<ellipse cx="1050" cy="427" rx="227" ry="68" fill="#f6c58a" opacity="0.55"/>
+<ellipse cx="820" cy="335" rx="294" ry="109" fill="#ffd9a0" opacity="0.37"/>
+<ellipse cx="1402" cy="280" rx="274" ry="86" fill="#ffd9a0" opacity="0.67"/>
+<ellipse cx="962" cy="472" rx="401" ry="110" fill="#ffd9a0" opacity="0.50"/>
+<ellipse cx="1594" cy="625" rx="289" ry="103" fill="#f6c58a" opacity="0.38"/>
+<ellipse cx="31" cy="489" rx="414" ry="75" fill="#fff0d6" opacity="0.40"/>
+</g><g filter="url(#b24)">
+<ellipse cx="1447" cy="531" rx="162" ry="37" fill="#fff6e6" opacity="0.56"/>
+<ellipse cx="997" cy="570" rx="208" ry="62" fill="#fff6e6" opacity="0.58"/>
+<ellipse cx="1498" cy="547" rx="267" ry="58" fill="#fff6e6" opacity="0.44"/>
+<ellipse cx="861" cy="588" rx="160" ry="51" fill="#fff6e6" opacity="0.70"/>
+<ellipse cx="1213" cy="635" rx="165" ry="47" fill="#fff6e6" opacity="0.47"/>
+<ellipse cx="1232" cy="808" rx="185" ry="36" fill="#fff6e6" opacity="0.75"/>
+<ellipse cx="436" cy="706" rx="226" ry="34" fill="#fff6e6" opacity="0.67"/>
+<ellipse cx="673" cy="631" rx="258" ry="38" fill="#fff6e6" opacity="0.43"/>
+<ellipse cx="427" cy="778" rx="222" ry="34" fill="#fff6e6" opacity="0.61"/>
+</g><rect y="405" width="1600" height="495" fill="url(#fade)"/></svg>

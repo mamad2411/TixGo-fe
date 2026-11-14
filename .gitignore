@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# env lokal (hanya .env.example yang boleh di-commit)
+.env
+.env.*
+!.env.example
+
+# symlink skill ke ../skills (tidak ikut repo ini)
+.claude/
+
+# artefak tooling
+playwright-report/
+test-results/
+coverage/
+lighthouse-report*.json
+stats.html
+
+# sumber desain berukuran besar (foto asli CC0) — diunduh ulang lewat scripts/assets/fetch_photos.py
+design-src/originals/
+design-src/layers/
+design-src/tmp/
